@@ -335,11 +335,14 @@ nav ul li a.active:after {
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    width: 100%;
+    position: relative;
 }
 
 .testimonial {
     min-width: 100%;
     padding: 0 1rem;
+    flex-shrink: 0;
 }
 
 .testimonial-content {
@@ -364,8 +367,8 @@ nav ul li a.active:after {
 }
 
 .testimonial-content p {
-    font-style: italic;
     margin-bottom: 0;
+    line-height: 1.7;
 }
 
 .testimonial-author {
@@ -1896,4 +1899,45 @@ footer {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.direct-contact {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.direct-contact p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.email-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.email-link:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.email-link i {
+    margin-right: 10px;
+}
+
+.contact-note {
+    color: var(--text-light);
+    font-style: italic;
 } 
