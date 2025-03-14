@@ -1,14 +1,15 @@
-This is a placeholder file to ensure the images directory is created and tracked in git.
+This is a placeholder file to check if the images folder exists and is accessible.
 
 Required images for the website:
-- IMG_2715.jpg (your personal West Coast photo)
-- hero-bg.jpg (for the homepage hero section)
-- shea-mckenzie.jpg (for your profile photo)
-- education.jpg (for the education section)
-- project1.jpg, project2.jpg, project3.jpg (for project highlights)
-- project-government.jpg, project-electrical.jpg (for case studies)
-- project-ai.jpg, project-strategy.jpg, project-digital.jpg, project-team.jpg (for additional projects)
-- consultant.jpg (for the homepage about section)
-- cta-bg.jpg (for call-to-action backgrounds)
+1. consultant.jpg - For the homepage "Who I Am" section
+2. westcoastshea.jpg - For the "Beyond Work" section on About page
+3. education.jpg - For the Education section on About page
+4. strategic-analysis.jpg - For Strategic Analysis service
+5. ai-implementation.jpg - For AI Implementation service
+6. market-development.jpg - For Market Development service
+7. project-management.jpg - For Project Management service
+8. project-government.jpg - For Government project
+9. project-electrical.jpg - For Electrical Distribution project
+10. hero-bg.jpg - For homepage hero background
 
 You can use stock photos or your own images for these placeholders. 
