@@ -258,6 +258,8 @@ nav ul li a.active:after {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    padding-bottom: 4rem;
 }
 
 .service-card:hover {
@@ -266,7 +268,7 @@ nav ul li a.active:after {
 }
 
 .service-card p {
-    flex-grow: 1;
+    margin-bottom: 0.5rem;
 }
 
 .service-icon {
@@ -291,9 +293,11 @@ nav ul li a.active:after {
 
 .read-more {
     display: inline-block;
-    margin-top: 1rem;
     font-weight: 600;
-    align-self: flex-start;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .read-more i {
@@ -1593,6 +1597,10 @@ footer {
 .featured-project {
     padding: 5rem 0;
     background-color: #f8f9fa;
+}
+
+.featured-project.alt-bg {
+    background-color: white;
 }
 
 .featured-project-grid {
