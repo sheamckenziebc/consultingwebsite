@@ -258,6 +258,11 @@ nav ul li a.active:after {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+}
+
+.service-card p {
+    margin-bottom: 1rem;
 }
 
 .spacer {
@@ -267,10 +272,6 @@ nav ul li a.active:after {
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.service-card p {
-    margin-bottom: 0.5rem;
 }
 
 .service-icon {
@@ -306,6 +307,18 @@ nav ul li a.active:after {
 
 .read-more:hover i {
     transform: translateX(5px);
+}
+
+.service-card .btn {
+    margin-top: auto;
+    position: static;
+}
+
+.service-card [style*="position: absolute"] {
+    position: static !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
 }
 
 /* About Preview */
@@ -642,18 +655,15 @@ footer {
     
     .service-card {
         padding: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .service-card p:last-of-type {
+        margin-bottom: 1rem;
     }
     
     .testimonial-author {
         padding-left: 1rem;
-    }
-    
-    .service-card {
-        padding-bottom: 5rem;
-    }
-    
-    .service-card p:last-of-type {
-        margin-bottom: 2.5rem;
     }
 }
 
