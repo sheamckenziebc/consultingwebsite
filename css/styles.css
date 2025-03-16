@@ -258,8 +258,10 @@ nav ul li a.active:after {
     display: flex;
     flex-direction: column;
     height: 100%;
-    position: relative;
-    padding-bottom: 4rem;
+}
+
+.spacer {
+    flex-grow: 1;
 }
 
 .service-card:hover {
@@ -294,10 +296,7 @@ nav ul li a.active:after {
 .read-more {
     display: inline-block;
     font-weight: 600;
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 1rem;
 }
 
 .read-more i {
@@ -647,6 +646,14 @@ footer {
     
     .testimonial-author {
         padding-left: 1rem;
+    }
+    
+    .service-card {
+        padding-bottom: 5rem;
+    }
+    
+    .service-card p:last-of-type {
+        margin-bottom: 2.5rem;
     }
 }
 
