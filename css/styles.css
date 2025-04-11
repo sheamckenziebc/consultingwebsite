@@ -827,21 +827,17 @@ footer {
 }
 
 .process-steps {
-    padding: 80px 0;
-    background-color: #f8f9fa;
+    margin-top: 40px;
 }
 
 .process-steps-container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .process-steps h2 {
     text-align: center;
-    margin-bottom: 50px;
-    color: #333;
-    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .steps-grid {
@@ -870,7 +866,7 @@ footer {
     left: 20px;
     width: 40px;
     height: 40px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -2464,5 +2460,73 @@ footer {
     
     .offer-header .price strong {
         font-size: 1.5rem;
+    }
+}
+
+/* Adding styling for process-step class */
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.process-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.process-step .content {
+    flex: 1;
+}
+
+.process-step h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.process-step p {
+    margin-bottom: 0;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .process-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .process-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .process-step .content {
+        width: 100%;
+        text-align: center;
     }
 } 
