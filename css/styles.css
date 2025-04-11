@@ -827,119 +827,269 @@ footer {
 }
 
 .process-steps {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    position: relative;
+    padding: 80px 0;
+    background-color: #f8f9fa;
 }
 
-.process-steps:before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 60px;
-    right: 60px;
-    height: 2px;
-    background-color: #ddd;
-    z-index: 1;
+.process-steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.process-step {
-    position: relative;
-    z-index: 2;
+.process-steps h2 {
     text-align: center;
-    flex: 1;
-    padding: 0 15px;
+    margin-bottom: 50px;
+    color: #333;
+    font-size: 2.5rem;
 }
 
-.process-number {
-    width: 80px;
-    height: 80px;
-    background-color: var(--secondary-color);
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.step-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 0 auto 1.5rem;
-    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-.process-step h3 {
-    margin-bottom: 1rem;
+.step-card h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-.process-step p {
-    font-size: 0.9rem;
-    color: var(--text-light);
+.step-card p {
+    color: #666;
+    line-height: 1.6;
 }
 
-/* Responsive Styles for Services Page */
-@media (max-width: 992px) {
-    .service-detail-grid {
+@media (max-width: 900px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .steps-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
     }
-    
-    .service-detail-image {
-        order: -1;
-    }
-    
-    .service-detail-grid.reverse .service-detail-image {
-        order: -1;
-    }
-    
-    .process-steps {
-        flex-direction: column;
-        margin-top: 2rem;
-    }
-    
-    .process-steps:before {
-        display: none;
-    }
-    
-    .process-step {
-        margin-bottom: 2rem;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+}
+
+/* Simple Offer Section */
+.simple-offer {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.offer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.offer-container:hover {
+    transform: translateY(-5px);
+}
+
+.offer-content {
+    padding: 40px;
+    text-align: center;
+}
+
+.offer-content h3 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0056b3;
+    margin: 15px 0;
+}
+
+.offer-description {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #666;
+}
+
+.benefits-columns {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.benefits-column {
+    flex: 1;
+    max-width: 250px;
+}
+
+.benefits-column ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.benefits-column li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.benefits-column li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #0056b3;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
-    .page-header {
-        padding: 7rem 0 3rem;
+    .benefits-columns {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .page-header h1 {
-        font-size: 2.2rem;
+    .benefits-column {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
     
-    .service-icon.large {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .service-detail-content h2 {
-        text-align: center;
-    }
-    
-    .service-detail-content h2:after {
-        left: 50%;
-        transform: translateX(-50%);
+    .offer-content {
+        padding: 30px 20px;
     }
 }
 
-@media (max-width: 576px) {
-    .service-list li {
+/* Portfolio Sample Section */
+.portfolio-sample {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.portfolio-sample h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+    font-size: 2.5rem;
+}
+
+.portfolio-item {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.portfolio-image {
+    flex: 1;
+    min-width: 45%;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-details {
+    flex: 1;
+    padding: 40px;
+}
+
+.client-logo {
+    margin-bottom: 20px;
+}
+
+.portfolio-details h3 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.project-type {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-features {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.project-features li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .portfolio-item {
         flex-direction: column;
     }
     
-    .service-list li i {
-        margin-bottom: 0.5rem;
+    .portfolio-image {
+        min-width: 100%;
     }
+}
+
+/* Service Intro Section */
+.service-intro {
+    padding: 60px 0;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-content h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.2rem;
+}
+
+.intro-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 /* About Page Styles */
@@ -2109,5 +2259,210 @@ footer {
     
     .legal-section h2 {
         font-size: 1.3rem;
+    }
+}
+
+/* Advanced Services Section */
+.advanced-services {
+    padding: 5rem 0;
+}
+
+.advanced-services-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.advanced-services-content > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.advanced-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.advanced-feature {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.advanced-feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.advanced-feature h3 {
+    margin-bottom: 1rem;
+}
+
+.advanced-feature p {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+.advanced-cta {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.advanced-cta p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .advanced-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .advanced-cta {
+        padding: 1.5rem;
+    }
+}
+
+/* Simple Offer Layout */
+.simple-offer {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.offer-header {
+    margin-bottom: 3rem;
+}
+
+.offer-header h2 {
+    margin: 1rem 0;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+.offer-header .price {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.offer-header .price strong {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.offer-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.benefits-column h3 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.benefits-column h3 i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.benefits-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-column ul li {
+    margin-bottom: 12px;
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.benefits-column ul li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.benefits-column ul li strong {
+    color: var(--primary-color);
+}
+
+.offer-cta {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.offer-cta p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.simple-offer .footnote {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .simple-offer {
+        padding: 2rem 1.5rem;
+    }
+    
+    .offer-benefits {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .offer-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .offer-header .price {
+        font-size: 1.1rem;
+    }
+    
+    .offer-header .price strong {
+        font-size: 1.5rem;
     }
 } 
